@@ -43,7 +43,7 @@ class FileManager:
 
 
 def get_cli()->list:
-        if 1<len(sys.argv)<4:
+        if len(sys.argv) in {2, 3}:
             source = sys.argv[1]
             target = 'dist'
             if len(sys.argv)==3: target = sys.argv[2]

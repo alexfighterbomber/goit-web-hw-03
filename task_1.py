@@ -35,7 +35,7 @@ class FileManager:
                     self.copy_files(item)
 
         futures = []
-        with ThreadPoolExecutor(max_workers=10) as executor:
+        with ThreadPoolExecutor(max_workers=8) as executor:
             scan_directory(self.source_dir)
             for future in futures:
                 future.result()
